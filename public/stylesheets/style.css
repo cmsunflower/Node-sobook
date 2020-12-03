@@ -1,0 +1,170 @@
+*{
+margin:0;
+padding:0;
+}
+.header{
+height:160px;
+width:100%;
+min-width:1200px;
+margin:0 auto;
+box-sizing: border-box;
+}
+.navHeader{
+height:100px;
+background-color:rgba(255,255,255,0.7);
+background-image:url('../images/logo.png');
+background-repeat: no-repeat;
+background-position:center;
+}
+.nav{
+height:60px;
+width:100%;
+background-color:rgba(0,0,0,0.6);
+}
+.navList{
+margin:0 auto;
+display:flex;
+justify-content:space-between;
+width:1200px;
+color:#fff;
+font-size:18px;
+height:60px;
+line-height:60px;
+}
+.navList a{
+  color:#fff;
+  text-decoration: none;
+}
+.navList:last-child input,
+.navList:last-child button{
+border:none;
+outline:none;
+}
+.navList:last-child input{
+padding:10px;
+background-color:rgb(255,255,255);
+color:rgba(0,0,0,0.6);
+}
+.navList:last-child button{
+padding:10px;
+border-radius:2px;
+}
+.content{
+margin:0 auto;
+width:1200px;
+display:flex;
+background-color:#efefef;
+}
+.left{
+display:flex;
+flex-wrap: wrap;
+width:1000px;
+}
+.left a{
+  text-decoration: none;
+  color:#000;
+}
+.right{
+flex:1;
+}
+
+.bookitem{
+box-sizing: border-box;
+text-align:center;
+position:relative;
+background-color:#fff;
+width:240px;
+margin:10px 5px 0;
+padding:10px 5px 0;
+height:350px;
+border-bottom:1px solid #777;
+}
+.bookitem:hover{
+box-shadow: 0px 5px 5px rgba(90, 90, 90, 0.1);
+}
+.bookitem img{
+width:210px;
+height:280px;
+}
+.bookitem h2{
+font-size:16px;
+border-bottom:1px dashed #ccc;
+width:90%;
+margin:5px auto;
+text-overflow: ellipsis;
+white-space:nowrap;
+overflow: hidden;
+}
+.bookitem p:nth-of-type(1){
+font-size:14px;
+font-weight:400;
+margin-bottom:10px;
+}
+.bookitem p:nth-of-type(2){
+position: absolute;
+top:10px;
+left:15px;
+background-color:rgba(90,90,90,.7);
+color:#fff;
+padding:5px;
+font-size:14px;
+}
+.right img{
+width:200px;
+}
+.left-info{
+  width:100%;
+  height:auto;
+  vertical-align: middle;
+}
+.left-title{
+  padding:10px;
+}
+.left-info img{
+  width:210px;
+  height:280px;
+  float:left;
+  padding:20px;
+}
+.left-book{
+  line-height:2em;
+  margin:10px;
+}
+.left-content{
+  padding:10px;
+}
+.left-content p{
+  font-size:14px;
+  line-height:1.5;
+  text-indent: 2em;
+}
+.pagination{
+  width:1200px;
+  margin:0 auto;
+  text-align:center;
+}
+.page{
+  display: inline-block;
+  text-align:center;
+  height: 50px;
+}
+.page div{
+  box-sizing: border-box;
+  padding:5px 10px;
+  float:left;
+  margin:5px;
+  background-color:#efefef;
+  color:#000;
+  font-size: 14px;
+}
+.page div.active{
+  background-color:#777;
+  color:#fff;
+}
+a{
+  text-decoration: none;
+  color:#000;
+}
+div.total{
+  background-color:#fff;
+}

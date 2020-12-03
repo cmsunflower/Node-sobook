@@ -1,0 +1,59 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-11-25 22:16:18
+ * @LastEditTime: 2020-11-26 10:25:19
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \NodeTest\appweb\02sobook\sobooks\views\search.ejs
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <div>
+        <header>
+            <div class="navHeader"></div>
+            <div class="nav">
+                <div class="navList">
+                    <div><a href="/">首页</a></div>
+                    <% for(let i =0;i<category.length;i++){ %>
+                    <div>
+                        <a href="/category/<%=category[i].id%>"><%=category[i].category%></a>
+                    </div>
+                    <% } %>
+                    <div>
+                        <input type="text" value="" id="searchtxt">
+                        <button id="searchbtn">搜索</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="content">
+            <div class="left">
+                <% for(let i=0;i<book.length;i++) {%>
+                <a href="/book/<%-book[i].id%>">
+                    <div class="bookitem">
+                        <img src="<%-book[i].imgurl%>" alt="">
+                        <h2><%-book[i].bookname%></h2>
+                        <p><%-book[i].author%></p>
+                        <p><%-book[i].category%></p>
+                    </div>
+                </a>
+                <%}%>
+            </div>
+            <div class="right">
+                <img src="https://sobooks.cc/AD/330push.jpg" alt="">
+            </div>
+        </div>
+    </div>
+        <script src="/javascripts/search.js"></script>
+</body>
+</html>

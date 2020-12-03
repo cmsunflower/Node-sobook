@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <div>
+        <header>
+            <div class="navHeader"></div>
+            <div class="nav">
+                <div class="navList">
+                    <% category.forEach(function(item){ %>
+                    <div><a href="/category/<%-item.id%>/page/1"><%-item.category%></a></div>
+                    <%});%>
+                    <div>
+                        <input type="text">
+                        <button><span>搜索</span></button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="content">
+            <div class="left">
+               <h2 class="left-title"><%-book.bookname %></h2>
+               <div class="left-info">
+                    <img src="<%- book.imgurl %>" alt="">
+                    <div class="left-book">
+                        <p>书名：<%-book.bookname %></p>
+                        <p>作者：<%-book.author %></p>
+                        <p>评分：<%-book.bookcount %></p>
+                    </div>
+               </div>
+               <div class="left-content">
+                    <h2>内容简介</h2>
+                    <p>
+                    <%-book.brief %>
+                    </p>
+               </div>
+            </div>
+            <div class="right">
+                <img src="https://sobooks.cc/AD/330push.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
